@@ -1,5 +1,7 @@
 REST API находится  по ссылке http://host:port/tsproject/api/
 
+
+DEPARTMENT
 http://host:port/tsproject/api/department
 GET - получение всех отделов, ответ приходит в формате:
 [
@@ -63,6 +65,8 @@ PUT - переподчинение отдела другому подразде�
 }
 
 
+
+EMPLOYEE
 http://host:port/tsproject/api/employee
 GET - получение всех сотрудников, ответ приходит в формате:
 [
@@ -92,6 +96,27 @@ PUT - добавление сотрудника, рест ожидает объ�
 
 
 http://host:port/tsproject/api/employee/:id
+GET - получение сотрудника, ответ приходит в формате:
+{
+  "f_name" : String,
+  "s_name" : String,
+  "t_name" : String,
+  "sex" : String,
+  "birth_date" : Date,
+  "department" : Department.name,
+  "salary" : Int
+}
+
+
+http://host:port/tsproject/api/employee/:id/salary
+PUT -  изменение зп сотрудника, рест ожидает объект в формате:
+{
+  "id" : Int,
+  "salary" : Int
+}
+
+
+http://host:port/tsproject/api/employee/:id/department
 PUT - перевод сотрудника в другой отдел, ожидается объект в формате:
 {
   "id" : Int,
