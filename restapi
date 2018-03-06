@@ -1,0 +1,86 @@
+REST API находится  по ссылке http://host:port/tsproject/api/
+
+http://host:port/tsproject/api/department
+GET - получение всех отделов, ответ приходит в формате:
+[
+  {
+    "name": String,
+    "parent": Department.name, //String
+    "head" : Employee.name //String
+  }
+]
+
+PUT - добавление нового отдела, чтобы добавить новый отдел, рест ожидает JSON-объект с обязательными полями
+{
+  "name": String, // (isRequired)
+  "head": Employee._id, //(isRequired)
+  "parent": Department._id // (Optional)
+}
+
+
+http://host:port/tsproject/api/department/:id
+GET - получение конкретного отдела, ответ приходит в формате:
+{
+  "name" : String,
+  "parent" : Department.name, //String
+  "head" : Employee.name  //String
+}
+
+PUT - обновить данные, рест ожидает объект с полями, которые надо обновить в формате JSON
+{
+  "_id" : Int,  //(isRequired)
+  "name" : String,  //(isRequired)
+  "parent" : Department._id,  //(Optional)
+  "head" : Employee._id //(isRequired)
+}
+
+PUT - закрытие отдела, ожидает объект с одним полем {"closet": true}
+
+
+http://host:port/tsproject/api/department/:id/employee
+GET - получение списка сотрудников подразделения, ответ приходит в формате:
+[
+  {
+    "f_name" : String,
+    "s_name" : String,
+    "t_name" : String
+  }
+]
+
+
+http://host:port/tsproject/api/employee
+GET - получение всех сотрудников, ответ приходит в формате:
+[
+  {
+    "f_name" : String,
+    "s_name" : String,
+    "t_name" : String,
+    "sex" : String,
+    "b_date" : Date,
+    "department" : Department.name, //String
+    "salary" : Int
+  }
+]
+
+PUT - добавление сотрудника, рест ожидает объект в формате:
+{
+  "f_name" : String,  //(isRequired)
+  "s_name" : String,  //(isRequired)
+  "t_name" : String,  //(isRequired)
+  "sex" : String, //(isRequired)
+  "birth_date" : Date,  //(isRequired)
+  "department" : Department._id,  //(isRequired)
+  "position" : Position._id, //(optional)
+  "grade" : Grade._id,  //(optional)
+  "salary" : Int //(isRequired)
+}
+
+
+http://host:port/tsproject/api/employee/:id
+PUT - перевод сотрудника в другой отдел, ожидается объект в формате:
+{
+  "id" : Int,
+  "departament" : Departament._id
+}
+
+PUT - увольнение сотрудника, ожидает объект с одним полем {"closet": true}
