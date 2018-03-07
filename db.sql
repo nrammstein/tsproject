@@ -25,47 +25,47 @@ GRANT UNLIMITED TABLESPACE TO BASE1 ;
 GRANT CREATE PROCEDURE TO BASE1 ;
 
 -- первый этап - создание таблиц, последовательностей и триггеров (для автогенерации ID)
-CREATE TABLE certificates (
-    id              NUMBER NOT NULL,
-    "Employee Id"   NUMBER NOT NULL,
-    "Date"          DATE,
-    company         VARCHAR2(100),
-    name            VARCHAR2(100),
-    "Number"        NUMBER NOT NULL,
-    scan            BLOB
+CREATE TABLE CERTIFICATES (
+    ID              NUMBER NOT NULL,
+    EMPLOYEE_ID     NUMBER NOT NULL,
+    "DATE"          DATE,
+    COMPANY         VARCHAR2(100),
+    NAME            VARCHAR2(100),
+    "NUMBER"        NUMBER NOT NULL,
+    SCAN            BLOB
 );
 
-CREATE TABLE departments (
-    id            NUMBER NOT NULL,
-    "Parent Id"   NUMBER,
-    name          VARCHAR2(30) NOT NULL,
-    head          NUMBER
+CREATE TABLE DEPARTMENTS (
+    ID            NUMBER NOT NULL,
+    PARENT_ID     NUMBER,
+    NAME          VARCHAR2(30) NOT NULL,
+    HEAD          NUMBER NOT NULL
 );
 
-CREATE TABLE employees (
-    id              NUMBER NOT NULL,
-    "UID"           NUMBER NOT NULL,
-    "First Name"    VARCHAR2(100) NOT NULL,
-    "Second Name"   VARCHAR2(100) NOT NULL,
-    "Third Name"    VARCHAR2(100),
-    sex             VARCHAR2(3),
-    "Birth Date"    DATE NOT NULL,
-    "Dpt Id"        NUMBER,
-    "Position Id"   NUMBER,
-    "Grade Id"      NUMBER,
-    salary          NUMBER,
-    "From Date"     DATE NOT NULL,
-    "To Date"       DATE
+CREATE TABLE EMPLOYEES (
+    ID              NUMBER NOT NULL,
+    "UID"             NUMBER NOT NULL,
+    FIRST_NAME      VARCHAR2(100) NOT NULL,
+    SECOND_NAME     VARCHAR2(100) NOT NULL,
+    THIRD_NAME      VARCHAR2(100),
+    SEX             VARCHAR2(1) NOT NULL,
+    BIRTH_DATE      DATE NOT NULL,
+    DEPARTMENT_ID   NUMBER NOT NULL,
+    POSITION_ID     NUMBER NOT NULL,
+    GRADE_ID        NUMBER NOT NULL,
+    SALARY          NUMBER,
+    FROM_DATE       DATE NOT NULL,
+    TO_DATE         DATE
 );
 
-CREATE TABLE grades (
-    id     NUMBER NOT NULL,
-    name   VARCHAR2(10) NOT NULL
+CREATE TABLE GRADES (
+    ID     NUMBER NOT NULL,
+    NAME   VARCHAR2(10) NOT NULL
 );
 
-CREATE TABLE positions (
-    id     NUMBER NOT NULL,
-    name   VARCHAR2(50) NOT NULL
+CREATE TABLE POSITIONS (
+    ID     NUMBER NOT NULL,
+    NAME   VARCHAR2(50) NOT NULL
 );
 
 CREATE SEQUENCE certificates_id_seq START WITH 1 NOCACHE ORDER;
@@ -132,25 +132,25 @@ ALTER TABLE positions ADD CONSTRAINT positions_pk PRIMARY KEY ( id );
 ALTER TABLE positions ADD CONSTRAINT positions_name_un UNIQUE ( name );
 
 ALTER TABLE certificates
-    ADD CONSTRAINT certificates_employees_fk FOREIGN KEY ( "Employee Id" )
+    ADD CONSTRAINT certificates_employees_fk FOREIGN KEY ( EMPLOYEE_ID )
         REFERENCES employees ( id );
 
 ALTER TABLE departments
-    ADD CONSTRAINT deaprtments_deaprtments_fk FOREIGN KEY ( "Parent Id" )
+    ADD CONSTRAINT deaprtments_deaprtments_fk FOREIGN KEY ( PARENT_ID )
         REFERENCES departments ( id );
 
 ALTER TABLE departments
-    ADD CONSTRAINT deaprtments_employees_fk FOREIGN KEY ( head )
+    ADD CONSTRAINT deaprtments_employees_fk FOREIGN KEY ( HEAD )
         REFERENCES employees ( id );
 
 ALTER TABLE employees
-    ADD CONSTRAINT employees_deaprtments_fk FOREIGN KEY ( "Dpt Id" )
+    ADD CONSTRAINT employees_deaprtments_fk FOREIGN KEY ( DEPARTMENT_ID )
         REFERENCES departments ( id );
 
 ALTER TABLE employees
-    ADD CONSTRAINT employees_grades_fk FOREIGN KEY ( "Grade Id" )
+    ADD CONSTRAINT employees_grades_fk FOREIGN KEY ( GRADE_ID )
         REFERENCES grades ( id );
 
 ALTER TABLE employees
-    ADD CONSTRAINT employees_positions_fk FOREIGN KEY ( "Position Id" )
+    ADD CONSTRAINT employees_positions_fk FOREIGN KEY ( POSITION_ID )
         REFERENCES positions ( id );
