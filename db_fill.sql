@@ -57,15 +57,15 @@ VALUES (employees_id_seq.nextval, 11, 'Helen', 'Thompson', 'F', TO_DATE('06/22/1
 INSERT INTO EMPLOYEES (ID, "UID", FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
 VALUES (employees_id_seq.nextval, 12, 'Alexandra', 'McGregor', 'F', TO_DATE('07/29/1971', 'MM/DD/YYYY'), 12, 11, 3, 12345, SYSDATE);
 
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2000', 'MM/DD/YYYY'), 'Certificate Company 1', 'Certificate 1', 1);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1990', 'MM/DD/YYYY'), 'Certificate Company 2', 'Certificate 2', 2);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2001', 'MM/DD/YYYY'), 'Certificate Company 3', 'Certificate 3', 3);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1997', 'MM/DD/YYYY'), 'Certificate Company 4', 'Certificate 4', 4);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2003', 'MM/DD/YYYY'), 'Certificate Company 5', 'Certificate 5', 5);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1999', 'MM/DD/YYYY'), 'Certificate Company 6', 'Certificate 6', 6);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1990', 'MM/DD/YYYY'), 'Certificate Company 7', 'Certificate 7', 7);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2010', 'MM/DD/YYYY'), 'Certificate Company 8', 'Certificate 8', 8);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1998', 'MM/DD/YYYY'), 'Certificate Company 9', 'Certificate 9', 9);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2008', 'MM/DD/YYYY'), 'Certificate Company 10', 'Certificate 10', 10);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1996', 'MM/DD/YYYY'), 'Certificate Company 11', 'Certificate 11', 11);
-INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, "DATE", COMPANY, NAME, "NUMBER") VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1991', 'MM/DD/YYYY'), 'Certificate Company 12', 'Certificate 12', 12);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2000', 'MM/DD/YYYY'), 'Certificate Company 1', 'Certificate 1', 1);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1990', 'MM/DD/YYYY'), 'Certificate Company 2', 'Certificate 2', 2);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2001', 'MM/DD/YYYY'), 'Certificate Company 3', 'Certificate 3', 3);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1997', 'MM/DD/YYYY'), 'Certificate Company 4', 'Certificate 4', 4);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2003', 'MM/DD/YYYY'), 'Certificate Company 5', 'Certificate 5', 5);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1999', 'MM/DD/YYYY'), 'Certificate Company 6', 'Certificate 6', 6);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1990', 'MM/DD/YYYY'), 'Certificate Company 7', 'Certificate 7', 7);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2010', 'MM/DD/YYYY'), 'Certificate Company 8', 'Certificate 8', 8);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1998', 'MM/DD/YYYY'), 'Certificate Company 9', 'Certificate 9', 9);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2008', 'MM/DD/YYYY'), 'Certificate Company 10', 'Certificate 10', 10);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1996', 'MM/DD/YYYY'), 'Certificate Company 11', 'Certificate 11', 11);
+INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1991', 'MM/DD/YYYY'), 'Certificate Company 12', 'Certificate 12', 12);
