@@ -3,21 +3,20 @@ package ru.ts.bestteam;
 import org.hibernate.HibernateException;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.springframework.stereotype.Service;
 
+@Service
 public class HibernateUtil {
-    private HibernateUtil(){}
-    private static SessionFactory sessionFactory;
-
-    static {
+    public HibernateUtil(){
         try{
-            sessionFactory = new Configuration().configure().buildSessionFactory();
+            this.sessionFactory=new Configuration().configure().buildSessionFactory();
         }catch (HibernateException ex){
-            System.err.println("Failed Initialization session Factory... Ops");
             ex.printStackTrace();
         }
     }
+    private SessionFactory sessionFactory;
 
-    public static SessionFactory getSessionFactory(){
+    public  SessionFactory getSessionFactory(){
         return sessionFactory;
     }
 }

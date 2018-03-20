@@ -7,8 +7,13 @@
   <version>1.0-SNAPSHOT</version>
   <name>tsproject Maven Webapp</name>
   <url>http://maven.apache.org</url>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+    </properties>
   <dependencies>
-       <dependency>
+<!--       <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
       <version>5.0.2.RELEASE</version>
@@ -18,7 +23,7 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
       <version>5.0.2.RELEASE</version>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>org.springframework</groupId>
@@ -32,7 +37,25 @@
       <version>5.0.2.RELEASE</version>
     </dependency>
 
-    <dependency>
+      <dependency>
+          <groupId>javax.inject</groupId>
+          <artifactId>javax.inject</artifactId>
+          <version>1</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-core</artifactId>
+          <version>2.9.4</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.fasterxml.jackson.core</groupId>
+          <artifactId>jackson-databind</artifactId>
+          <version>2.9.4</version>
+      </dependency>
+
+<!--    <dependency>
       <groupId>commons-httpclient</groupId>
       <artifactId>commons-httpclient</artifactId>
       <version>3.1</version>
@@ -42,7 +65,7 @@
       <groupId>org.apache.cxf</groupId>
       <artifactId>cxf-rt-frontend-jaxrs</artifactId>
       <version>3.2.2</version>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>org.hibernate</groupId>
@@ -55,12 +78,18 @@
       <artifactId>hibernate-entitymanager</artifactId>
       <version>5.2.12.Final</version>
     </dependency>
+      
+      <dependency>
+          <groupId>org.hibernate</groupId>
+          <artifactId>hibernate-envers</artifactId>
+          <version>5.2.12.Final</version>
+      </dependency>
 
-    <dependency>
+<!--    <dependency>
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-annotations</artifactId>
       <version>3.5.6-Final</version>
-    </dependency>
+    </dependency>-->
 
     <dependency>
       <groupId>junit</groupId>
@@ -76,12 +105,59 @@
       <scope>test</scope>
     </dependency>
 
-    <dependency>
+<!--    <dependency>
       <groupId>com.oracle</groupId>
       <artifactId>ojdbc14</artifactId>
       <version>10.2.0.3.0</version>
-    </dependency>
+    </dependency>-->
+
+<!--      <dependency>
+          <groupId>mysql</groupId>
+          <artifactId>mysql-connector-java</artifactId>
+          <version>5.1.6</version>
+      </dependency>-->
+
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-simple</artifactId>
+          <version>1.6.5</version>
+      </dependency>
+
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-api</artifactId>
+          <version>1.6.2</version>
+      </dependency>
+      <dependency>
+          <groupId>org.slf4j</groupId>
+          <artifactId>slf4j-log4j12</artifactId>
+          <version>1.6.2</version>
+      </dependency>
+
+      <dependency>
+          <groupId>log4j</groupId>
+          <artifactId>log4j</artifactId>
+          <version>1.2.17</version>
+      </dependency>
+
+      <dependency>
+         <groupId>javax.persistence</groupId>
+         <artifactId>persistence-api</artifactId>
+        <version>1.0</version>
+     </dependency>
+      <dependency>
+          <groupId>com.oracle</groupId>
+          <artifactId>ojdbc6</artifactId>
+          <version>11.2.0.3</version>
+      </dependency>
+
   </dependencies>
+    <repositories>
+        <repository>
+            <id>codelds</id>
+            <url>https://code.lds.org/nexus/content/groups/main-repo</url>
+        </repository>
+    </repositories>
   <build>
     <finalName>tsproject</finalName>
   </build>

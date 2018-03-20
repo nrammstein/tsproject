@@ -1,17 +1,19 @@
 package ru.ts.bestteam.entityobjects;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 
 @Entity
-@Table(name = "POSITIONS")
+@Table(name = "positions")
 public class Position {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id")
     private Long id;
 
-    @Column(name = "NAME")
+    @Column(name = "name", nullable = false, length = 100)
     private String name;
 
     public Long getId() {

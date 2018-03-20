@@ -1,31 +1,22 @@
 package ru.ts.bestteam.entityobjects;
 
+import org.hibernate.envers.Audited;
+
 import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table( name = "departments")
+@Table(name = "departments")
 public class Department {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
     private Long id;
-
-    @OneToOne
-    @JoinColumn(name = "parent_id")
-    private Department department;
-
-    @Column(name = "name")
+    private Department parentDepartment;
     private String name;
+    private Employee headEmployee;
 
-    @OneToOne
-    @JoinColumn(name = "head")
-    private Employee employee;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "department") //need mapped
-    private Set<Employee> employees;
-
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id", nullable = false)
     public Long getId() {
         return id;
     }
@@ -34,6 +25,17 @@ public class Department {
         this.id = id;
     }
 
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "parent_id")
+    public Department getParentDepartment() {
+        return parentDepartment;
+    }
+
+    public void setParentDepartment(Department parentDepartment) {
+        this.parentDepartment = parentDepartment;
+    }
+
+    @Column(name = "name", nullable = false, length = 100)
     public String getName() {
         return name;
     }
@@ -42,38 +44,13 @@ public class Department {
         this.name = name;
     }
 
-    public Department getDepartment() {
-        return department;
+    @OneToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "head")
+    public Employee getHeadEmployee() {
+        return headEmployee;
     }
 
-    public void setDepartment(Department department) {
-        this.department = department;
-    }
-
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
-    public Set<Employee> getEmployees() {
-        return employees;
-    }
-
-    public void setEmployees(Set<Employee> employees) {
-        this.employees = employees;
-    }
-
-    @Override
-    public String toString() {
-        return "Department{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", department=" + department +
-                ", employee=" + employee +
-                ", employees=" + employees +
-                '}';
+    public void setHeadEmployee(Employee headEmployee) {
+        this.headEmployee = headEmployee;
     }
 }

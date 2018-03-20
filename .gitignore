@@ -1,2 +1,4 @@
 .idea/
 tsproject.iml
+tsproject.log
+tsproject-debug.log
