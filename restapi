@@ -85,10 +85,10 @@ PUT - добавление сотрудника, рест ожидает объ�
 {
   "f_name" : String,  //(isRequired)
   "s_name" : String,  //(isRequired)
-  "t_name" : String,  //(isRequired)
+  "t_name" : String,  //(optional)
   "sex" : String, //(isRequired)
   "birth_date" : Date,  //(isRequired)
-  "department" : Department._id,  //(isRequired)
+  "department" : Department._id,  //(optional)
   "position" : Position._id, //(optional)
   "grade" : Grade._id,  //(optional)
   "salary" : Int //(isRequired)
