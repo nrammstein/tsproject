@@ -33,29 +33,29 @@ INSERT INTO DEPARTMENTS (ID, PARENT_ID, NAME, HEAD) VALUES (departments_id_seq.n
 INSERT INTO DEPARTMENTS (ID, PARENT_ID, NAME, HEAD) VALUES (departments_id_seq.nextval, 10, 'QA', 12);
 
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 1, 'Bill', 'Johns', 'M', TO_DATE('09/12/1980', 'MM/DD/YYYY'), 1, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Bill', 'Johns', 'M', TO_DATE('09/12/1980', 'MM/DD/YYYY'), 1, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 2, 'John', 'Doe', 'M', TO_DATE('03/11/1970', 'MM/DD/YYYY'), 2, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'John', 'Doe', 'M', TO_DATE('03/11/1970', 'MM/DD/YYYY'), 2, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 3, 'Marta', 'Grey', 'F', TO_DATE('05/27/1981', 'MM/DD/YYYY'), 3, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Marta', 'Grey', 'F', TO_DATE('05/27/1981', 'MM/DD/YYYY'), 3, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 4, 'Will', 'Smith', 'M', TO_DATE('01/08/1977', 'MM/DD/YYYY'), 4, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Will', 'Smith', 'M', TO_DATE('01/08/1977', 'MM/DD/YYYY'), 4, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 5, 'Frank', 'Freeman', 'M', TO_DATE('02/14/1983', 'MM/DD/YYYY'), 5, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Frank', 'Freeman', 'M', TO_DATE('02/14/1983', 'MM/DD/YYYY'), 5, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 6, 'Maggie', 'Phillipson', 'F', TO_DATE('07/25/1979', 'MM/DD/YYYY'), 6, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Maggie', 'Phillipson', 'F', TO_DATE('07/25/1979', 'MM/DD/YYYY'), 6, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 7, 'Bart', 'Simpson', 'M', TO_DATE('02/15/1970', 'MM/DD/YYYY'), 7, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Bart', 'Simpson', 'M', TO_DATE('02/15/1970', 'MM/DD/YYYY'), 7, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 8, 'Chandler', 'Trump', 'M', TO_DATE('03/17/1990', 'MM/DD/YYYY'), 8, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Chandler', 'Trump', 'M', TO_DATE('03/17/1990', 'MM/DD/YYYY'), 8, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 9, 'George', 'Bush', 'M', TO_DATE('10/01/1978', 'MM/DD/YYYY'), 9, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'George', 'Bush', 'M', TO_DATE('10/01/1978', 'MM/DD/YYYY'), 9, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 10, 'Stew', 'Capito', 'M', TO_DATE('04/20/1988', 'MM/DD/YYYY'), 10, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Stew', 'Capito', 'M', TO_DATE('04/20/1988', 'MM/DD/YYYY'), 10, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 11, 'Helen', 'Thompson', 'F', TO_DATE('06/22/1976', 'MM/DD/YYYY'), 11, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Helen', 'Thompson', 'F', TO_DATE('06/22/1976', 'MM/DD/YYYY'), 11, 11, 3, 12345, SYSDATE);
 INSERT INTO EMPLOYEES (ID, HISTORY_ID, FIRST_NAME, SECOND_NAME, SEX, BIRTH_DATE, DEPARTMENT_ID, POSITION_ID, GRADE_ID, SALARY, FROM_DATE)
-VALUES (employees_id_seq.nextval, 12, 'Alexandra', 'McGregor', 'F', TO_DATE('07/29/1971', 'MM/DD/YYYY'), 12, 11, 3, 12345, SYSDATE);
+VALUES (employees_id_seq.nextval, employees_uid_seq.nextval, 'Alexandra', 'McGregor', 'F', TO_DATE('07/29/1971', 'MM/DD/YYYY'), 12, 11, 3, 12345, SYSDATE);
 
 INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/2000', 'MM/DD/YYYY'), 'Certificate Company 1', 'Certificate 1', 1);
 INSERT INTO CERTIFICATES (ID, EMPLOYEE_ID, RECEIVING_DATE, COMPANY, NAME, NUMBER_CER) VALUES (certificates_id_seq.nextval, 1, TO_DATE('01/01/1990', 'MM/DD/YYYY'), 'Certificate Company 2', 'Certificate 2', 2);
