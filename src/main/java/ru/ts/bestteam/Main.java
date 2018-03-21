@@ -12,10 +12,10 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws SQLException {
-        EmployeeDao employeeDao = new EmployeeDaoImpl();
+//        EmployeeDao employeeDao = new EmployeeDaoImpl();
 //        DepartmentDao departmentDao = new DepartmentDaoImpl();
 //        Department department;
-        Employee employee = new Employee();
+//        Employee employee = new Employee();
 //        employee.setFirstName("Jon");
 //        employee.setSecondName("Travolta");
 //        employee.setSex('M');
@@ -25,14 +25,16 @@ public class Main {
 //        employee.setBirthDate(date);
 //        employee.setSalary(new BigDecimal("65000"));
 //        employeeDao.addEmployee(employee);
-        employee= employeeDao.getEmployee(2L);
-        System.out.println("bla bla " + employee.getDepartment().getId());
+//        employee= employeeDao.getEmployee(2L);
+//        System.out.println("bla bla " + employee.getDepartment().getId());
        /* Collection<Employee> col =  employeeDao.getEmployees();
         Iterator<Employee> iterator = col.iterator();
         while(iterator.hasNext()){
             Employee em = iterator.next();
             System.out.println(em);
         }*/
+
+
     }
 
 }

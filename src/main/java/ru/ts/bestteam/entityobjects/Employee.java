@@ -141,7 +141,7 @@ public class Employee {
         this.salary = salary;
     }
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "from_date", nullable = false)
     public Date getFromDate() {
         return fromDate;
@@ -151,7 +151,7 @@ public class Employee {
         this.fromDate = fromDate;
     }
 
-    @Temporal(TemporalType.DATE)
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "to_date")
     public Date getToDate() {
         return toDate;

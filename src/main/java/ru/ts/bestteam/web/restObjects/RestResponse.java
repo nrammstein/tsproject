@@ -19,4 +19,12 @@ public class RestResponse {
     public void setResponse(String response) {
         this.response = response;
     }
+
+    @Override
+    public String toString() {
+        return "RestResponse{" +
+                "message='" + message + '\'' +
+                ", response='" + response + '\'' +
+                '}';
+    }
 }
