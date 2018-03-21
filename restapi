@@ -111,8 +111,8 @@ GET - получение сотрудника, ответ приходит в ф
 http://host:port/tsproject/api/employee/:id/salary
 PUT -  изменение зп сотрудника, рест ожидает объект в формате:
 {
-  "id" : Int,
-  "salary" : Int
+  "id" : Int,       //(isRequired)
+  "salary" : Int    //(isRequired)
 }
 
 
